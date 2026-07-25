@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f1df" />
+    <title>Fruit Catch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <div class="brand-mark" aria-label="Fruit Catch home">
+          <span class="brand-fruit">🍎</span>
+          <span>FRUIT<br /><strong>CATCH</strong></span>
+        </div>
+        <div class="top-actions">
+          <button class="icon-button" id="soundButton" type="button" aria-label="Toggle sound" title="Toggle sound">♫</button>
+          <button class="pause-button" id="pauseButton" type="button"><span>Ⅱ</span> Pause</button>
+        </div>
+      </header>
+
+      <section class="scoreboard" aria-label="Game status">
+        <div class="score-stat">
+          <span class="stat-label">SCORE</span>
+          <strong id="scoreValue">00000</strong>
+        </div>
+        <div class="score-stat center-stat">
+          <span class="stat-label">BEST</span>
+          <strong id="bestValue">00000</strong>
+        </div>
+        <div class="lives-stat">
+          <span class="stat-label">LIVES</span>
+          <span id="livesValue" class="lives" aria-label="3 lives">♥ ♥ ♥</span>
+        </div>
+      </section>
+
+      <section class="game-card">
+        <div class="game-heading">
+          <div>
+            <p class="eyebrow">Orchard run <span id="levelValue">01</span></p>
+            <h1>Catch the good stuff.</h1>
+          </div>
+          <div class="combo-badge" id="comboBadge">COMBO <strong>x1</strong></div>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="gameCanvas" width="900" height="560" aria-label="Fruit Catch game area"></canvas>
+          <div class="overlay hidden" id="overlay">
+            <div class="overlay-panel">
+              <span class="overlay-fruit" id="overlayFruit">🍓</span>
+              <p class="eyebrow" id="overlayEyebrow">Ready?</p>
+              <h2 id="overlayTitle">Fruit Catch</h2>
+              <p id="overlayMessage">Move your basket and catch the fruit. Avoid the rotten ones.</p>
+              <button class="primary-button" id="overlayButton" type="button">Start game <span>→</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="game-footer">
+          <div class="tip"><span class="tip-icon">✦</span><span>Catch fruit for points <b>•</b> miss three and it's over</span></div>
+          <div class="controls" aria-label="Controls"><span>←</span><span>→</span><small>or drag</small></div>
+        </div>
+      </section>
+      <footer>Made for a good harvest <span>✦</span></footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
